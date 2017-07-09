@@ -8,11 +8,11 @@
       meal_plan.valid?
     end
 
-    it "requires a start date" do
+    it "requires a start_date" do
       meal_plan.error[:start_date].must_include "can't be blank"
     end
 
-    it "requires an end date" do
+    it "requires an end_date" do
       meal_plan.error[:end_date].must_include "can't be blank"
     end
 

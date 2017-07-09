@@ -1,6 +1,6 @@
 class CreateMealPlans < ActiveRecord::Migration[5.1]
   def change
-    create_table :meal_plans do |t|\
+    create_table :meal_plans do |t|
       t.date :start_date, null: false
       t.date :end_date, null: false
       t.references :users, null: false, foreign_key: true

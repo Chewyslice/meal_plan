@@ -7,5 +7,12 @@
     validates :user, presence: true
 
     def build_meals
+      user_recipe_ids = user.recipes.pluck(:id)
+
+    (start_date..end_date).each do |date|
+      available_recipe_ids = user_recipe_ids - meals.map(&:recipe_id)
+
+      meals.build(date: date, recipe_id: available_recipe_ids.sample)
+    end
     end
   end

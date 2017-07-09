@@ -22,7 +22,7 @@ describe MealPlan do
   end
 
   describe "generating a weekly plan" do
-    let(:meal_plan) { build(meal_plan) }
+    let(:meal_plan) { build(:meal_plan) }
 
     before do
       7.times do

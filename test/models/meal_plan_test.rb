@@ -5,7 +5,7 @@
       let(:meal_plan) { MealPlan.new }
 
     before do
-      meal_plan.valid
+      meal_plan.valid?
     end
 
     it "requires a start date" do

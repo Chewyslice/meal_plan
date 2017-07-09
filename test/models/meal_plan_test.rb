@@ -9,15 +9,15 @@
     end
 
     it "requires a start_date" do
-      meal_plan.error[:start_date].must_include "can't be blank"
+      meal_plan.errors[:start_date].must_include "can't be blank"
     end
 
     it "requires an end_date" do
-      meal_plan.error[:end_date].must_include "can't be blank"
+      meal_plan.errors[:end_date].must_include "can't be blank"
     end
 
     it "requires a user" do
-      meal_plan.error[:user].must_include "can't be blank"
+      meal_plan.errors[:user].must_include "can't be blank"
     end
   end
 end
